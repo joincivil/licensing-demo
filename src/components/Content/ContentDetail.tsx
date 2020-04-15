@@ -65,7 +65,7 @@ export const ContentDetail: React.FunctionComponent<
         </Date>
         <p>{metadata.description}</p>
         <ViewArticle>
-          <a href={metadata.canonicalURL} target="_blank">
+          <a href={metadata.canonicalURL} target="_blank" rel="noopener noreferrer">
             View Article <OpenInNewIcon />
           </a>
         </ViewArticle>
