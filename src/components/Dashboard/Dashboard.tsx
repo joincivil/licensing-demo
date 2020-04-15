@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ContentList } from "./ContentList";
+import { IssuedCredentials } from "./IssuedCredentials";
 import { DashboardLayout, DashboardTab } from "../elements";
 
 export const Dashboard: React.FunctionComponent = props => {
@@ -7,7 +7,7 @@ export const Dashboard: React.FunctionComponent = props => {
     <>
       <DashboardLayout>
         <DashboardTab title={"Issued Credentials"}>
-          <ContentList />
+          <IssuedCredentials />
         </DashboardTab>
         <DashboardTab title={"Recieved Credentials"}>
           <p>Recieved Credentials</p>

@@ -11,18 +11,18 @@ const TDStyled = styled.td`
   text-overflow: ellipsis;
 
   a {
-    color: #2B56FF;
+    color: #2b56ff;
     text-decoration: none;
   }
 `;
 
-export interface ContentListItemProps {
+export interface IssuedCredentialsListItemProps {
   contentId: string;
   metadata: Metadata;
 }
 
-export const ContentListItem: React.FunctionComponent<
-  ContentListItemProps
+export const IssuedCredentialsListItem: React.FunctionComponent<
+  IssuedCredentialsListItemProps
 > = props => {
   const { metadata } = props;
   return (

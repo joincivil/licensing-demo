@@ -70,8 +70,7 @@ export class DashboardLayout extends React.Component<
   }
 
   public render(): JSX.Element {
-    const DashboardNav =
-      this.props.DashboardNavCustom || DashboardNavDefault;
+    const DashboardNav = this.props.DashboardNavCustom || DashboardNavDefault;
     const arrowColor = this.state.isResponsiveTabsetVisible
       ? colors.primary.BLUE
       : colors.basic.GRAY_500;
