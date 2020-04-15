@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { ContentListItem } from "./ContentListItem";
+import { IssuedCredentialsListItem } from "./IssuedCredentialsListItem";
 import { dummyData } from "../types";
 
 const TableStyled = styled.table`
@@ -15,7 +15,7 @@ const THStyled = styled.th`
   text-align: left;
 `;
 
-export const ContentList: React.FunctionComponent = props => {
+export const IssuedCredentials: React.FunctionComponent = props => {
   const metadata = dummyData;
   return (
     <TableStyled>
@@ -29,7 +29,11 @@ export const ContentList: React.FunctionComponent = props => {
       </thead>
       <tbody>
         {metadata.map((article, idx) => (
-          <ContentListItem key={idx} metadata={article} contentId={""} />
+          <IssuedCredentialsListItem
+            key={idx}
+            metadata={article}
+            contentId={""}
+          />
         ))}
       </tbody>
     </TableStyled>

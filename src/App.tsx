@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <React.Suspense fallback={<></>}>
         <Switch>
-          <Route path="/dashboard" component={Dashboard} />
+          <Route path="/dashboard/:activeTab?" component={Dashboard} />
           <Route path="/content/:contentId?" component={ContentPage} />
           <Route path="/" component={Home} />
         </Switch>

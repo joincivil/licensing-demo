@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Metadata } from "../types";
-import { OpenInNewIcon } from "../icons";
+import { OpenInNewIcon } from "../elements";
 
 const TDStyled = styled.td`
   border-bottom: 1px solid #aaa;
@@ -11,18 +11,18 @@ const TDStyled = styled.td`
   text-overflow: ellipsis;
 
   a {
-    color: #2B56FF;
+    color: #2b56ff;
     text-decoration: none;
   }
 `;
 
-export interface ContentListItemProps {
+export interface IssuedCredentialsListItemProps {
   contentId: string;
   metadata: Metadata;
 }
 
-export const ContentListItem: React.FunctionComponent<
-  ContentListItemProps
+export const IssuedCredentialsListItem: React.FunctionComponent<
+  IssuedCredentialsListItemProps
 > = props => {
   const { metadata } = props;
   return (
@@ -33,7 +33,7 @@ export const ContentListItem: React.FunctionComponent<
         <Link to="/content">View Details</Link>
       </TDStyled>
       <TDStyled>
-        <a href={metadata.canonicalURL} target="_blank">
+        <a href={metadata.canonicalURL} target="_blank" rel="noopener noreferrer">
           View Article <OpenInNewIcon />
         </a>
       </TDStyled>

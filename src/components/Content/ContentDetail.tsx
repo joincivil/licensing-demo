@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { Card } from "rimble-ui";
 import { Metadata } from "../types";
-import { OpenInNewIcon } from "../icons";
+import { OpenInNewIcon } from "../elements";
 
 const ContentDetailStyled = styled.div`
   padding: 50px;
@@ -65,7 +65,7 @@ export const ContentDetail: React.FunctionComponent<
         </Date>
         <p>{metadata.description}</p>
         <ViewArticle>
-          <a href={metadata.canonicalURL} target="_blank">
+          <a href={metadata.canonicalURL} target="_blank" rel="noopener noreferrer">
             View Article <OpenInNewIcon />
           </a>
         </ViewArticle>
