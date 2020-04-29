@@ -1,6 +1,7 @@
 import * as React from "react";
 import { RouteComponentProps } from "react-router-dom";
 import { formatRoute } from "react-router-named-routes";
+import { Main } from "../Main";
 import { IssuedCredentials } from "./IssuedCredentials";
 import { DashboardLayout, DashboardTab } from "../elements";
 
@@ -23,7 +24,7 @@ export const Dashboard: React.FunctionComponent<DashboardProps> = props => {
   }, [props.match.params.activeTab]);
 
   return (
-    <>
+    <Main>
       <DashboardLayout
           activeIndex={activeTabIndex}
           onActiveTabChange={(tab: number) => {
@@ -32,20 +33,11 @@ export const Dashboard: React.FunctionComponent<DashboardProps> = props => {
         <DashboardTab title={"Issued Credentials"}>
           <IssuedCredentials />
         </DashboardTab>
-        <DashboardTab title={"Recieved Credentials"}>
-          <p>Recieved Credentials</p>
-        </DashboardTab>
-        <DashboardTab title={"Marketplace"}>
-          <p>Marketplace</p>
-        </DashboardTab>
-        <DashboardTab title={"Members"}>
-          <p>Members</p>
-        </DashboardTab>
         <DashboardTab title={"Settings"}>
           <p>Settings</p>
         </DashboardTab>
       </DashboardLayout>
-    </>
+    </Main>
   );
 };
 

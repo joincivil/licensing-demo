@@ -1,7 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Input } from "rimble-ui";
-import { fonts } from "../elements";
 
 const ContentVCFeedContainer = styled.div`
   margin: 0 auto;
