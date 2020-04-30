@@ -1,5 +1,9 @@
 export interface Metadata {
   contentId: string;
+  credential: string;
+  time: string;
+  issuer: string;
+  contentType: string;
   title: string;
   publisher: string;
   revisionContentHash: string;
@@ -33,6 +37,10 @@ export interface TagsData {
 export const dummyData = [
   {
     contentId: "1001234",
+    credential: "Credential Recieved",
+    time: "09:28:28 AM UTC",
+    issuer: "Company",
+    contentType: "Brand Saftey Score",
     title:
       "A stunning 1 in 100 New York residents have now tested positive for coronavirus",
     publisher: "Washington Post",
@@ -59,6 +67,10 @@ export const dummyData = [
   },
   {
     contentId: "1001235",
+    credential: "Credential Recieved",
+    time: "09:08:28 AM UTC",
+    issuer: "Company",
+    contentType: "Brand Sentiment",
     title:
       "Where Germany had success in fighting coronavirus, Britain stumbled",
     publisher: "Washington Post",
@@ -81,6 +93,10 @@ export const dummyData = [
   },
   {
     contentId: "1001236",
+    credential: "Credential Recieved",
+    time: "08:28:28 AM UTC",
+    issuer: "Company",
+    contentType: "Brand Tone",
     title:
       "Keep parks open. The benefits of fresh air outweigh the risks of infection.",
     publisher: "Washington Post",
@@ -103,6 +119,10 @@ export const dummyData = [
   },
   {
     contentId: "1001237",
+    credential: "Credential Recieved",
+    time: "07:28:28 AM UTC",
+    issuer: "Company",
+    contentType: "Brand Saftey Score",
     title:
       "When will schools reopen? It depends on where you live, who’s in charge and whether they believe Anthony Fauci.",
     publisher: "Washington Post",

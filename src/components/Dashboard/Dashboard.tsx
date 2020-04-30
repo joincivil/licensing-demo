@@ -1,14 +1,13 @@
 import * as React from "react";
 import { RouteComponentProps } from "react-router-dom";
 import { formatRoute } from "react-router-named-routes";
-import { Main } from "../Main";
-import { IssuedCredentials } from "./IssuedCredentials";
+import { Explore } from "./Explore";
 import { DashboardLayout, DashboardTab } from "../elements";
 
 export interface DashboardParams {
-  activeTab?: "issued-credentials" | "recieved-credentials" | "marketplace" | "members" | "settings";
+  activeTab?: "explore" | "settings";
 }
-const TABS = ["issued-credentials", "recieved-credentials", "marketplace", "members", "settings"];
+const TABS = ["explore", "settings"];
 
 export interface DashboardProps extends RouteComponentProps<DashboardParams> {
   user?: any;
@@ -17,27 +16,27 @@ export interface DashboardProps extends RouteComponentProps<DashboardParams> {
 export const Dashboard: React.FunctionComponent<DashboardProps> = props => {
   const [activeTabIndex, setActiveTabIndex] = React.useState<number>(0);
   React.useEffect(() => {
-    const activeTab = props.match.params.activeTab || "issued-credentials";
+    const activeTab = props.match.params.activeTab || "explore";
     if (TABS[activeTabIndex] !== activeTab) {
       setActiveTabIndex(TABS.indexOf(activeTab));
     }
   }, [props.match.params.activeTab]);
 
   return (
-    <Main>
+    <>
       <DashboardLayout
           activeIndex={activeTabIndex}
           onActiveTabChange={(tab: number) => {
             props.history.push(formatRoute(props.match.path, { activeTab: TABS[tab] }));
           }}>
-        <DashboardTab title={"Issued Credentials"}>
-          <IssuedCredentials />
+        <DashboardTab title={"Explore"}>
+          <Explore />
         </DashboardTab>
         <DashboardTab title={"Settings"}>
           <p>Settings</p>
         </DashboardTab>
       </DashboardLayout>
-    </Main>
+    </>
   );
 };
 
