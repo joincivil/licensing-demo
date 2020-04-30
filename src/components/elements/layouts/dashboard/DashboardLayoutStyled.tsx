@@ -1,24 +1,17 @@
 import styled from "styled-components";
-import { colors } from "../../";
 
 export const DashboardLayoutContainer = styled.span`
   display: flex;
 `;
 
 export const DashboardContent = styled.div`
-  margin-left: 300px;
   padding: 20px;
-  width: calc(100% - 300px);
+  width: auto;
 `;
 
 export const DashboardNavDefault = styled.nav`
-  background-color: ${colors.basic.GRAY_100};
-  bottom: 0;
-  height: 100%;
-  position: fixed;
   padding: 20px;
-  top: 0;
-  width: 300px;
+  width: 250px;
 `;
 
 export const DashboardTabBtnContainer = styled.ul`
